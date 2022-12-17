@@ -2,7 +2,7 @@ import http from 'http';
 import { Readable } from 'stream';
 import { randomUUID  } from 'crypto';
 
-function * run() {
+function* run() {
   for(let index = 0; index <= 99; index += 1) {
     const data = {
       id: randomUUID(),
