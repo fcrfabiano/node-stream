@@ -1,5 +1,17 @@
 import http from 'http';
 import { Readable } from 'stream';
+import { randomUUID  } from 'crypto';
+
+function * run() {
+  for(let index = 0; index <= 99; index += 1) {
+    const data = {
+      id: randomUUID(),
+      name: `Fabiano-${index}`
+    };
+
+    yield data;
+  }
+}
 
 async function handler(request, response) {
   const readable = new Readable({
