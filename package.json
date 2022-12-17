@@ -1,0 +1,17 @@
+{
+  "name": "node-stream",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "server": "nodemon src/server.js",
+    "client": "nodemon src/client.js"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/fcrfabiano/node-stream",
+  "author": "Fabiano César",
+  "devDependencies": {
+    "eslint": "^8.30.0",
+    "nodemon": "2"
+  }
+}
