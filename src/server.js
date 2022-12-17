@@ -16,7 +16,10 @@ function * run() {
 async function handler(request, response) {
   const readable = new Readable({
     read() {
-
+      for(const data of run()) {
+        console.log('Sending', data);
+        this.push(JSON.stringify(data) + '\n');
+      }
       // Para informar que os dados acabaram
       this.push(null);
     }
